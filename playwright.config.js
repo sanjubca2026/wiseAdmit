@@ -12,7 +12,7 @@ export default defineConfig({
   reporter: 'html',
 
   use: {
-    headless: false,               // ✅ Browser will open
+    headless: true,               // ✅ Browser will open
     trace: 'on-first-retry',
   },
 
