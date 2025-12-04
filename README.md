@@ -104,10 +104,12 @@ Framework: POM (Page Object Model)
 Test Summary
 
 Total Tests	Passed	Failed	Skipped	Remarks
+
 3	3	0	0	All Sign-In test cases passed successfully.
 
 Test Case Details
 TC ID	Description	Result	Remarks
+
 TC001	Login with valid student credentials	Passed	Username displayed correctly
 TC002	Login with invalid email	Passed	Correct error message shown
 TC003	Login with invalid password	Passed	Correct error message shown
@@ -116,21 +118,45 @@ TC003	Login with invalid password	Passed	Correct error message shown
 ## Observations
 
 Positive scenarios pass as expected.
+
 Negative scenarios display appropriate error messages.
+
 Credentials are kept secure using fixture userData.js and are not exposed in code.
 
 ## Potential Break Points for Sign-In in Future
 
-Change in login page URL or flow.
-Change in element locators (like buttons, input fields).
-Backend validation changes (error messages).
-Session or authentication token issues.
-Network or API failures.
+Five Things That Could Break Sign-In (User Perspective)
+
+1. Incorrect or Forgotten Credentials
+
+If the user enters the wrong email or password, or forgets them, login will fail.
+
+Users may also be frustrated if error messages are unclear.
+
+2. Website or Server Issues
+
+If the WiseAdmit website is down, slow, or the server is unresponsive, users will not be able to log in.
+
+3. Browser Compatibility Problems
+
+Some features on the login page (buttons, input fields) might not work properly on certain browsers or devices, preventing successful login.
+
+4. Network Connectivity Problems
+
+Poor internet connection or unstable networks can cause the login request to fail or take too long, making the process unsuccessful.
+
+5. Changes in Security Requirements
+
+If the system suddenly adds new security layers, like CAPTCHA, two-factor authentication (2FA), or stricter password rules, users may fail to log in if they are unaware of the changes.
 
 ## Suggested Website Improvements
 
-Add “Show Password” toggle for password field.
 Provide real-time email format validation.
-Add “Forgot Password” link clearly visible.
+
 Optimize for mobile login experience.
+
 Display loading indicator on login submission.
+
+Provide validation message state clear while triger invalid and again enter valid password
+
+Social/Third-Party Login Options
