@@ -84,3 +84,53 @@ npx playwright show-report
 ---
 
 *This README provides a comprehensive overview of the `wiseAdmit` automation project utilizing Playwright for end-to-end testing. For further assistance, please contact the project maintainer.*
+
+
+## Test cases : 
+
+Link: https://docs.google.com/spreadsheets/d/1z_ixVx33wOi5-WhtR0qR_RQMvDrEdm4HOm7JoyT63po/edit?usp=sharing
+
+
+## Test report:
+
+WiseAdmit Sign-In Automation Test Report
+
+Project: QA Automation Assessment – Sign-In (POM)
+Tested By: Sanju Kumari
+Date: 2025-12-04
+Automation Tool: Playwright
+Framework: POM (Page Object Model)
+
+Test Summary
+
+Total Tests	Passed	Failed	Skipped	Remarks
+3	3	0	0	All Sign-In test cases passed successfully.
+
+Test Case Details
+TC ID	Description	Result	Remarks
+TC001	Login with valid student credentials	Passed	Username displayed correctly
+TC002	Login with invalid email	Passed	Correct error message shown
+TC003	Login with invalid password	Passed	Correct error message shown
+
+
+## Observations
+
+Positive scenarios pass as expected.
+Negative scenarios display appropriate error messages.
+Credentials are kept secure using fixture userData.js and are not exposed in code.
+
+## Potential Break Points for Sign-In in Future
+
+Change in login page URL or flow.
+Change in element locators (like buttons, input fields).
+Backend validation changes (error messages).
+Session or authentication token issues.
+Network or API failures.
+
+## Suggested Website Improvements
+
+Add “Show Password” toggle for password field.
+Provide real-time email format validation.
+Add “Forgot Password” link clearly visible.
+Optimize for mobile login experience.
+Display loading indicator on login submission.
