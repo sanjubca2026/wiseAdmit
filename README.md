@@ -103,60 +103,68 @@ Framework: POM (Page Object Model)
 
 Test Summary
 
-Total Tests	Passed	Failed	Skipped	Remarks
+## Test Execution Summary
 
-3	3	0	0	All Sign-In test cases passed successfully.
+| Total Tests | Passed | Failed | Skipped | Remarks                                      |
+|-------------|--------|--------|---------|----------------------------------------------|
+| 3           | 3      | 0      | 0       | All Sign-In test cases passed successfully.  |
+
 
 Test Case Details
-TC ID	Description	Result	Remarks
 
-TC001	Login with valid student credentials	Passed	Username displayed correctly
-TC002	Login with invalid email	Passed	Correct error message shown
-TC003	Login with invalid password	Passed	Correct error message shown
+## Test Case Results
 
+| TC ID | Description                          | Result | Remarks                         |
+|-------|--------------------------------------|--------|----------------------------------|
+| TC001 | Login with valid student credentials | Passed | Username displayed correctly     |
+| TC002 | Login with invalid email             | Passed | Correct error message shown      |
+| TC003 | Login with invalid password          | Passed | Correct error message shown      |
 
 ## Observations
 
-Positive scenarios pass as expected.
+- **Positive scenarios work as expected**
+  - All valid login flows pass without issues.
 
-Negative scenarios display appropriate error messages.
+- **Negative scenarios show correct error handling**
+  - Appropriate error messages are displayed for invalid inputs.
 
-Credentials are kept secure using fixture userData.js and are not exposed in code.
+- **Credentials are securely managed**
+  - Sensitive data is stored in `userData.js` (fixtures) and not directly exposed in the code.
 
-## Potential Break Points for Sign-In in Future
 
-Five Things That Could Break Sign-In (User Perspective)
+## Potential Break Points for Sign-In (User Perspective)
 
-1. Incorrect or Forgotten Credentials
+- **Incorrect or Forgotten Credentials**
+  - Users may enter the wrong email/password or forget their credentials.
+  - Unclear or missing error messages can cause confusion.
 
-If the user enters the wrong email or password, or forgets them, login will fail.
+- **Website or Server Issues**
+  - If the WiseAdmit site is down, slow, or the server becomes unresponsive, users cannot log in.
 
-Users may also be frustrated if error messages are unclear.
+- **Browser Compatibility Problems**
+  - Login page elements (buttons, input fields, validation) may not work properly on certain browsers or devices.
 
-2. Website or Server Issues
+- **Network Connectivity Problems**
+  - Slow or unstable internet connections can cause login requests to fail or timeout.
 
-If the WiseAdmit website is down, slow, or the server is unresponsive, users will not be able to log in.
-
-3. Browser Compatibility Problems
-
-Some features on the login page (buttons, input fields) might not work properly on certain browsers or devices, preventing successful login.
-
-4. Network Connectivity Problems
-
-Poor internet connection or unstable networks can cause the login request to fail or take too long, making the process unsuccessful.
-
-5. Changes in Security Requirements
+- **Changes in Security Requirements**
+  - Password policy updates, token changes, or additional verification steps may block users if not implemented properly.
 
 If the system suddenly adds new security layers, like CAPTCHA, two-factor authentication (2FA), or stricter password rules, users may fail to log in if they are unaware of the changes.
 
 ## Suggested Website Improvements
 
-Provide real-time email format validation.
+- **Real-time email format validation**
+  - Automatically detect invalid email formats before form submission.
 
-Optimize for mobile login experience.
+- **Better mobile login experience**
+  - Improve responsiveness and UI layout for smaller screens.
 
-Display loading indicator on login submission.
+- **Show a loading indicator during login**
+  - Helps users understand that authentication is in progress.
 
-Provide validation message state clear while triger invalid and again enter valid password
+- **Clear validation message handling**
+  - Ensure error messages disappear or update correctly when the user corrects an invalid password or email.
 
-Social/Third-Party Login Options
+- **Add social or third-party login options**
+  - Options like Google, Facebook, or Apple Sign-In for faster and more convenient access.
