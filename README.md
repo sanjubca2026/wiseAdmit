@@ -93,13 +93,13 @@ Link: https://docs.google.com/spreadsheets/d/1z_ixVx33wOi5-WhtR0qR_RQMvDrEdm4HOm
 
 ## Test report:
 
-WiseAdmit Sign-In Automation Test Report
+**WiseAdmit Sign-In Automation Test Report**
 
-Project: QA Automation Assessment – Sign-In (POM)
-Tested By: Sanju Kumari
-Date: 2025-12-04
-Automation Tool: Playwright
-Framework: POM (Page Object Model)
+**Project:** QA Automation Assessment – Sign-In (POM)  
+**Tested By:** Sanju Kumari  
+**Date:** 2025-12-05 
+**Automation Tool:** Playwright  
+**Framework:** POM (Page Object Model)
 
 Test Summary
 
